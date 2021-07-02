@@ -1,0 +1,38 @@
+// VARIABLES
+// fonts
+$fontFamilies: (
+  primary: (
+    "Poppins",
+    sans-serif,
+  ),
+);
+
+//fontSizes
+$fontSizes: (
+  extraSmall: 0.5vh,
+  small: 1.25vh,
+  normal: 1.65vh,
+  big: 2vh,
+  middleBig: 3vh,
+  veryBig: 4vh,
+  extraBig: 5vh,
+  extraBig2: 6vh,
+);
+
+//fontWeights
+$fontWeights: (
+  normal: 400,
+  semiBold: 500,
+  bold: 700,
+  extraBold: 900,
+);
+
+//colors
+$colors: (
+  dark: #1f202a,
+  light: #f6f6f6,
+  "white": #fff,
+  primary: #7646ff,
+  primaryMiddle: #837baa,
+  primaryLight: #abaec7,
+);

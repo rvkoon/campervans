@@ -1,0 +1,10 @@
+body {
+  background-color: map-get($colors, "light");
+}
+
+p,
+li,
+a {
+  font-size: map-get($fontSizes, "normal");
+  line-height: map-get($fontSizes, "big");
+}
