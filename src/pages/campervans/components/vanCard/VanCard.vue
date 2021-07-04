@@ -1,9 +1,12 @@
 <template>
-  <article class="h-96 bg-white shadow-sm rounded-md" @click="handleCampervanSelection">
+  <button
+    class="h-96 bg-white shadow-sm rounded-md border-2 border-transparent hover:border-blue-300 overflow-hidden cursor-pointer"
+    @click="handleCampervanSelection"
+  >
     <img :src="thumbnail" alt="Image of a campervan" class="h-2/4 w-full object-cover" @error="setImageFBOnError"/>
-    <section class="p-6 flex flex-col h-2/4">
+    <section class="p-6 flex flex-col h-2/4 text-left">
       <div class="flex justify-between mb-2">
-        <p class="font-bold text-md">{{campervan.title}}</p>
+        <p class="font-bold lg:text-md text-base">{{campervan.title}}</p>
         <p class="text-base">{{`${campervan.starting_price}${currency}/j`}}</p>
       </div>
       <p class="text-base">{{campervan.vehicle_location_city}}</p>
@@ -13,7 +16,7 @@
         <p class="text-base font-bold text-yellow-400">{{`${campervan.review_average}/5`}}</p>
       </div>
     </section>
-  </article>
+  </button>
 </template>
 
 <script>
@@ -45,6 +48,4 @@ export default {
 }
 </script>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>

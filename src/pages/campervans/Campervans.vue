@@ -1,24 +1,24 @@
 <template>
-  <div id="container" class="container m-auto">
-    <section class="headerArea">
-      <PageHeader />
-    </section>
-    <section class="filtersArea">
-      <Filters />
-    </section>
-    <main class="mainArea pr-4">
-      <p v-if="!campervansList.length">
-        LOADING...
-      </p>
-      <ul class="grid gap-4 grid-cols-3">
-        <VanCard 
-          v-for="campervan in campervansList" 
-          :key="campervan.id" 
-          :campervan="campervan" 
-          :setCurrentCampervan="setCurrentCampervan"
-        />
-      </ul>
-    </main>
+  <div class="container m-auto h-screen max-h-screen flex flex-col p-12 gap-4">
+    <PageHeader />
+    <div class="xl:flex-1 xl:overflow-hidden flex xl:flex-row flex-col gap-4">
+      <div class="xl:w-1/4">
+        <Filters /> 
+      </div>
+      <main class="xl:pr-4 xl:overflow-y-scroll xl:w-3/4">
+        <p v-if="!campervansList.length">
+          LOADING...
+        </p>
+        <ul class="grid gap-4 md:grid-cols-2 2xl:grid-cols-3">
+          <VanCard 
+            v-for="campervan in campervansList" 
+            :key="campervan.id" 
+            :campervan="campervan" 
+            :setCurrentCampervan="setCurrentCampervan"
+          />
+        </ul>
+      </main>
+    </div>
   </div>
 </template>
 
