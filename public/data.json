@@ -3,6 +3,8 @@
     {
       "id": 6275,
       "title": "Chausson Flash 07 Clim cellule",
+      "illimited_km": true,
+      "foreign_tripping": true,
       "starting_price": 75,
       "currency_used": "EUR",
       "review_average": 4.5,
@@ -66,6 +68,8 @@
     {
       "id": 27229,
       "title": "Volkswagen Combi Bay Window Westfalia",
+      "illimited_km": true,
+      "foreign_tripping": true,
       "starting_price": 90,
       "currency_used": "EUR",
       "review_average": 4.8,
@@ -117,6 +121,8 @@
     {
       "id": 4484,
       "title": "Chausson Flash 03",
+      "illimited_km": true,
+      "foreign_tripping": false,
       "starting_price": 75,
       "currency_used": "EUR",
       "review_average": 4.7,
@@ -188,6 +194,8 @@
     {
       "id": 3981,
       "title": "Chausson Welcome 6",
+      "illimited_km": true,
+      "foreign_tripping": true,
       "starting_price": 63,
       "currency_used": "EUR",
       "review_average": 4.8,
@@ -291,6 +299,8 @@
     {
       "id": 6139,
       "title": "Westfalia Combi Westfalia",
+      "illimited_km": true,
+      "foreign_tripping": false,
       "starting_price": 75,
       "currency_used": "EUR",
       "review_average": 4.9,
@@ -342,6 +352,8 @@
     {
       "id": 10742,
       "title": "Challenger Magéo 192",
+      "illimited_km": true,
+      "foreign_tripping": false,
       "starting_price": 62,
       "currency_used": "EUR",
       "review_average": 4.2,
@@ -433,6 +445,8 @@
     {
       "id": 20934,
       "title": "Volkswagen California",
+      "illimited_km": true,
+      "foreign_tripping": true,
       "starting_price": 85,
       "currency_used": "EUR",
       "review_average": 4.8,
@@ -488,6 +502,8 @@
     {
       "id": 12867,
       "title": "Pla HAPPY 435",
+      "illimited_km": true,
+      "foreign_tripping": true,
       "starting_price": 91,
       "currency_used": "EUR",
       "review_average": 5,
@@ -539,6 +555,8 @@
     {
       "id": 22292,
       "title": "Fiat Ducato",
+      "illimited_km": true,
+      "foreign_tripping": true,
       "starting_price": 63,
       "currency_used": "EUR",
       "review_average": 4.9,
@@ -598,6 +616,8 @@
     {
       "id": 9153,
       "title": "Dethleffs Interal",
+      "illimited_km": true,
+      "foreign_tripping": true,
       "starting_price": 60,
       "currency_used": "EUR",
       "review_average": 4.6,

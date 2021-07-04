@@ -1,5 +1,5 @@
 <template>
-  <div class="container m-auto h-screen max-h-screen flex flex-col p-12 gap-4">
+  <div class="m-auto h-screen max-h-screen flex flex-col p-12 gap-4">
     <PageHeader />
     <VanList v-if="!currentCampervan" :campervansList="campervansList" :setCurrentCampervan="setCurrentCampervan"/>
     <CurrentCampervan v-else :currentCampervan='currentCampervan' :setCurrentCampervan="setCurrentCampervan" />

@@ -5,7 +5,7 @@
       </div>
       <p v-if="!campervansList.length">Chargement...</p>
       <main class="xl:pr-4 xl:overflow-y-scroll xl:w-3/4">
-        <ul class="grid gap-4 md:grid-cols-2 2xl:grid-cols-3">
+        <ul class="grid gap-4 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
           <VanCard 
             v-for="campervan in campervansList" 
             :key="campervan.id" 

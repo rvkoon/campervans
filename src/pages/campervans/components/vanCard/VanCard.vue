@@ -1,6 +1,6 @@
 <template>
   <button
-    class="h-96 bg-white shadow-sm rounded-md border-2 border-transparent hover:border-blue-300 overflow-hidden cursor-pointer"
+    class="h-96 bg-white shadow-sm rounded-md hover:bg-gray-100 overflow-hidden cursor-pointer"
     @click="setCurrentCampervan"
   >
     <img :src="thumbnail" alt="Image of a campervan" class="h-2/4 w-full object-cover" @error="setImageFBOnError"/>
