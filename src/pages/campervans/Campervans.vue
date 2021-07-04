@@ -1,28 +1,24 @@
 <template>
   <div class="container m-auto h-screen max-h-screen flex flex-col p-12 gap-4">
     <PageHeader />
-    <div class="xl:flex-1 xl:overflow-hidden flex xl:flex-row flex-col gap-4">
-      <div class="xl:w-1/4">
-        <Filters /> 
-      </div>
-      <p v-if="!campervansList.length">Chargement...</p>
-      <VanList :campervansList="campervansList" :setCurrentCampervan="setCurrentCampervan"/>
-    </div>
+    <VanList v-if="!currentCampervan" :campervansList="campervansList" :setCurrentCampervan="setCurrentCampervan"/>
+    <CurrentCampervan v-else :currentCampervan='currentCampervan' :setCurrentCampervan="setCurrentCampervan" />
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
 import PageHeader from '../../common/components/pageHeader'
-import Filters from './components/filters'
 import VanList from './components/vanList'
+import CurrentCampervan from './components/currentCampervan'
 
 export default {
   name: "Campervans",
-  components: {PageHeader, Filters, VanList},
+  components: {PageHeader, VanList, CurrentCampervan},
   computed: {
     ...mapState({
-      campervansList: state => state.campervans.campervansList
+      campervansList: state => state.campervans.campervansList,
+      currentCampervan: state => state.campervans.currentCampervan
     })
   },
   methods: {
