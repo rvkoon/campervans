@@ -5,19 +5,8 @@
       <div class="xl:w-1/4">
         <Filters /> 
       </div>
-      <main class="xl:pr-4 xl:overflow-y-scroll xl:w-3/4">
-        <p v-if="!campervansList.length">
-          LOADING...
-        </p>
-        <ul class="grid gap-4 md:grid-cols-2 2xl:grid-cols-3">
-          <VanCard 
-            v-for="campervan in campervansList" 
-            :key="campervan.id" 
-            :campervan="campervan" 
-            :setCurrentCampervan="setCurrentCampervan"
-          />
-        </ul>
-      </main>
+      <p v-if="!campervansList.length">Chargement...</p>
+      <VanList :campervansList="campervansList" :setCurrentCampervan="setCurrentCampervan"/>
     </div>
   </div>
 </template>
@@ -26,11 +15,11 @@
 import { mapState } from 'vuex'
 import PageHeader from '../../common/components/pageHeader'
 import Filters from './components/filters'
-import VanCard from './components/vanCard'
+import VanList from './components/vanList'
 
 export default {
   name: "Campervans",
-  components: {PageHeader, Filters, VanCard},
+  components: {PageHeader, Filters, VanList},
   computed: {
     ...mapState({
       campervansList: state => state.campervans.campervansList
@@ -49,29 +38,4 @@ export default {
 };
 </script>
 
-<style lang="scss">
-  #container{
-    height: 100vh;
-    max-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 9fr;
-    padding: 4vh;
-    gap: 2vh;
-    grid-template-areas: 'header header'
-                         'filters main';
-
-    .headerArea{
-      grid-area: header;
-    }
-
-    .filtersArea{
-      grid-area: filters;
-    }
-
-    .mainArea{
-      grid-area: main;
-      overflow-y: scroll;
-    }
-  }
-</style>
+<style lang="scss"></style>
