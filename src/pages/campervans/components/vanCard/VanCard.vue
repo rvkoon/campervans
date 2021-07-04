@@ -1,12 +1,6 @@
 <template>
-  <article class="h-96 bg-white shadow-sm rounded-md">
-
-
+  <article class="h-96 bg-white shadow-sm rounded-md" @click="handleCampervanSelection">
     <img :src="thumbnail" alt="Image of a campervan" class="h-2/4 w-full object-cover" @error="setImageFBOnError"/>
-
-    <!-- <object :data="campervan.pictures[0].url" type="image/png" class="h-2/4 w-full object-cover">
-      <img :src="vanImage" alt="Image of a campervan">
-    </object> -->
     <section class="p-6 flex flex-col h-2/4">
       <div class="flex justify-between mb-2">
         <p class="font-bold text-md">{{campervan.title}}</p>
@@ -28,7 +22,7 @@ import vanImage from '../../../../common/images/campervan.svg'
 
 export default {
   name: "VanCard",
-  props: ['campervan'],
+  props: ['campervan', 'setCurrentCampervan'],
   data: function(){
     return {
       thumbnail: this.campervan.pictures[0].url
@@ -42,6 +36,9 @@ export default {
   methods: {
     setImageFBOnError() {
       this.thumbnail = vanImage
+    },
+    handleCampervanSelection(){
+      this.setCurrentCampervan(this.campervan)
     }
   }
 

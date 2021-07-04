@@ -1,5 +1,5 @@
 <template>
-  <div id="container">
+  <div id="container" class="container m-auto">
     <section class="headerArea">
       <PageHeader />
     </section>
@@ -11,7 +11,12 @@
         LOADING...
       </p>
       <ul class="grid gap-4 grid-cols-3">
-        <VanCard v-for="campervan in campervansList" :key="campervan.id" :campervan="campervan"/>
+        <VanCard 
+          v-for="campervan in campervansList" 
+          :key="campervan.id" 
+          :campervan="campervan" 
+          :setCurrentCampervan="setCurrentCampervan"
+        />
       </ul>
     </main>
   </div>
@@ -26,9 +31,16 @@ import VanCard from './components/vanCard'
 export default {
   name: "Campervans",
   components: {PageHeader, Filters, VanCard},
-  computed: mapState({
-    campervansList: state => state.campervans.campervansList
-  }),
+  computed: {
+    ...mapState({
+      campervansList: state => state.campervans.campervansList
+    })
+  },
+  methods: {
+    setCurrentCampervan(selectedCampervan){ 
+      this.$store.commit('campervans/setCurrentCampervan', selectedCampervan) 
+    }
+  },
   created () {
     setTimeout(() => {
       this.$store.dispatch('campervans/getCampervansList')

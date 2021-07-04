@@ -3,6 +3,9 @@ const mutations = {
     state.fetchCampervansListError = false;
     state.campervansList = campervansList;
   },
+  setCurrentCampervan(state, campervan) {
+    state.currentCampervan = campervan;
+  },
   setFetchCampervansListError(state) {
     state.fetchCampervansListError = true;
   },
