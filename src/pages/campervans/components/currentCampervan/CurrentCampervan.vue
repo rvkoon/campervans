@@ -17,7 +17,7 @@
         >
         <div class="flex flex-col pb-6">
           <p class="font-bold lg:text-md text-3xl">{{currentCampervan.title}}</p>
-          <p class="text-base mb-2">{{currentCampervan.vehicle_location_city}}</p>
+          <p class="text-xl mb-2">{{currentCampervan.vehicle_location_city}}</p>
           <div class="flex-grow"></div>
           <p class="text-base">
             <span class="font-bold text-yellow-400">
@@ -35,14 +35,14 @@
           v-for="option in vanOptions" :key="option.id"
           class="flex w-2/12 h-full flex-col text-center bg-gray-200 p-2 rounded-xl"
         >
-          <img :src="option.img" alt="picto" class="w-8 h-8 m-auto mb-4">
+          <img :src="option.img" alt="picto" class="w-8 h-8 m-auto mb-2">
           <p class="text-sm">{{option.text}}</p>
         </div>
       </section>
 
     </main>
 
-    <aside class="flex-grow flex flex-col gap-4">
+    <aside class="w-2/6 flex flex-col gap-4">
       <button
         @click='handleSetCurrentCampervan'
         class="text-base border-2 border-gray-400 hover:border-gray-700 px-8 py-2 rounded-md mb-4 self-start"
@@ -56,7 +56,10 @@
         </div>
       </section>
       <section class="w-full bg-white rounded-md p-6 flex-grow">
-        <p>Bla bla reinsurance</p>
+        <h3 class="font-bold text-lg mb-6">Reinsurance</h3>
+        <p class="text-base">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam beatae consectetur dolore. Blanditiis illo debitis fugiat culpa assumenda, dolore iusto ut harum at sit autem molestiae numquam officia nam a.</p>
+        <br>
+        <p class="text-base">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam beatae consectetur dolore. Blanditiis illo debitis fugiat culpa assumenda, dolore iusto ut harum at sit autem molestiae numquam officia nam a.</p>
       </section>
     </aside>
   </article>

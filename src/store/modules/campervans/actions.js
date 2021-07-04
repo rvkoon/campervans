@@ -6,7 +6,7 @@ const actions = {
     console.log(data.data);
 
     if (!data?.data) {
-      return commit("setCampervansListFetchError", true);
+      return commit("setFetchCampervansListError", true);
     }
     commit("setCampervansList", data.data.results);
   },

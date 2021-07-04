@@ -4,8 +4,12 @@ const campervans = {
   async getAllCampervans() {
     //Faking API request
     const url = `/data.json`;
-    const response = await axios.get(url);
-    return response;
+    try {
+      const response = await axios.get(url);
+      return response;
+    } catch (e) {
+      return e;
+    }
   },
 };
 

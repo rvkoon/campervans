@@ -3,7 +3,6 @@
       <div class="xl:w-1/4">
         <Filters /> 
       </div>
-      <p v-if="!campervansList.length">Chargement...</p>
       <main class="xl:pr-4 xl:overflow-y-scroll xl:w-3/4">
         <ul class="grid gap-4 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
           <VanCard 

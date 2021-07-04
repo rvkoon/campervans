@@ -1,7 +1,11 @@
 <template>
-  <div class="m-auto h-screen max-h-screen flex flex-col p-12 gap-4">
+  <div class="container m-auto h-screen max-h-screen flex flex-col p-12 gap-4">
     <PageHeader />
-    <VanList v-if="!currentCampervan" :campervansList="campervansList" :setCurrentCampervan="setCurrentCampervan"/>
+    <div v-if="!campervansList.length" class="text-center">
+      <p v-if="!fetchCampervansListError">Chargement...</p>
+      <p v-else class="text-red-500 font-bold">ERROR FETCHING CAMPERVANS</p>
+    </div>
+    <VanList v-else-if="!currentCampervan && campervansList.length" :campervansList="campervansList" :setCurrentCampervan="setCurrentCampervan"/>
     <CurrentCampervan v-else :currentCampervan='currentCampervan' :setCurrentCampervan="setCurrentCampervan" />
   </div>
 </template>
@@ -18,7 +22,8 @@ export default {
   computed: {
     ...mapState({
       campervansList: state => state.campervans.campervansList,
-      currentCampervan: state => state.campervans.currentCampervan
+      currentCampervan: state => state.campervans.currentCampervan,
+      fetchCampervansListError: state => state.campervans.fetchCampervansListError
     })
   },
   methods: {
