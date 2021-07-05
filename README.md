@@ -1,4 +1,8 @@
-Simple application that displays a list of campervans
+Simple application that:
+
+- fetches a list of camperVans from fake data
+- displays a list of campervans
+- display one single selected campervan
 
 # campervans
 
