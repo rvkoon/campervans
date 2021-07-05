@@ -62,9 +62,6 @@ export default {
         foreignTripping: this.foreignTripping
       })
     }
-  },
-  mounted: function(){
-    console.log('COUCOU ' + this.minVansPrice)
   }
 }
 </script>

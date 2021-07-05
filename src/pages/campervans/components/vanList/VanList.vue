@@ -13,7 +13,6 @@
           />
         </ul>
       </main>
-      {{minVansPrice}}
     </div>
 </template>
 
